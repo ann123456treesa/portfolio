@@ -46,7 +46,7 @@ with st.container():
         tile = st.container()
         tile.markdown(
             """
-            <div style="background-color: #4682B4; padding: 20px; border-radius: 5px;">
+            <div style="background-color: #4682B4; padding: 100px; border-radius: 5px;">
                 <h2 style="color: white; text-align: center;">Animation</h2>
                 <p style="color: white; text-align: center;">Explore amazing animations here!</p>
 
@@ -60,10 +60,15 @@ with st.container():
         # ("Go to [motion](motion)")
 
     with row1[1]:
-        tile = st.container(height=300)
-        tile.title("Animation")
-        tile.page_link("pages/animation.py", label="see more")
+        tile = st.container()
+        tile.markdown(
+            """
+            <div style="background-color: #4682B4; padding: 200px; border-radius: 5px;">
 
+            """,
+            unsafe_allow_html=True
+        )
+        tile.title("Motion")
     # with row1[2]:
     #     tile = st.container(height=300)
     #     tile.title("Grpahic design")
@@ -79,19 +84,7 @@ with st.container():
 with st.container():
     st.write("---")
 
-    # Draw a red square using HTML/CSS
-    st.markdown(
-        """
-        <div style="width:100px;height:100px;background-color:red;"></div>
-        """,
-        unsafe_allow_html=True
-    )
 
-    # Draw a blue circle using HTML/CSS
-    st.markdown(
-        """
-        <div style="width:100px;height:100px;border-radius:50%;background-color:blue;"></div>
-        """,
-        unsafe_allow_html=True
 
-    )
+
+
