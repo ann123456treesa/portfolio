@@ -33,6 +33,7 @@ with st.container():
 
 
 
+
 # ----Adding projects-----
 
 with st.container():
@@ -41,8 +42,20 @@ with st.container():
     row1 = st.columns(3)
 
     with row1[0]:
-        tile = st.container(height=300)
-        tile.title("Motion Graphics")
+
+        tile = st.container()
+        tile.markdown(
+            """
+            <div style="background-color: #4682B4; padding: 20px; border-radius: 5px;">
+                <h2 style="color: white; text-align: center;">Animation</h2>
+                <p style="color: white; text-align: center;">Explore amazing animations here!</p>
+
+            </div>
+            """,
+            unsafe_allow_html=True
+
+        )
+        # tile.title("Motion Graphics")
         tile.page_link("pages/motion.py", label="see more")
         # ("Go to [motion](motion)")
 
@@ -63,3 +76,22 @@ with st.container():
 
 
 
+with st.container():
+    st.write("---")
+
+    # Draw a red square using HTML/CSS
+    st.markdown(
+        """
+        <div style="width:100px;height:100px;background-color:red;"></div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Draw a blue circle using HTML/CSS
+    st.markdown(
+        """
+        <div style="width:100px;height:100px;border-radius:50%;background-color:blue;"></div>
+        """,
+        unsafe_allow_html=True
+
+    )
