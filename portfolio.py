@@ -63,16 +63,44 @@ with st.container():
         tile = st.container()
         tile.markdown(
             """
-            <div style="background-color: #4682B4; padding: 200px; border-radius: 5px;">
-
+            <style>
+            .hover-container {
+                background-color: #4682B4;
+                padding: 20px;
+                border-radius: 10px;
+                height: 300px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-container:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            }
+            .hover-container h2, .hover-container p {
+                color: white;
+                text-align: center;
+            }
+            .hover-container a {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: white;
+                color: #4682B4;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            </style>
+            <div class="hover-container">
+                <h2>Graphic Designer</h2>
+                <p>Explore creative designs and projects!</p>
+                <a href="?page=graphic">See more</a>
+            </div>
             """,
             unsafe_allow_html=True
         )
-        tile.title("Motion")
-    # with row1[2]:
-    #     tile = st.container(height=300)
-    #     tile.title("Grpahic design")
-    #     tile.markdown("read more [graphic](graphic)")
+
+
+
 
     with row1[2]:
         tile = st.container(height=300)
@@ -83,8 +111,5 @@ with st.container():
 
 with st.container():
     st.write("---")
-
-
-
 
 
