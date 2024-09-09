@@ -9,7 +9,19 @@ with st.container():
     st.subheader("Hi, I am Aleena :wave:")
     st.title("3D Generalist")
     st.write("I am a passionate 3D Artist")
-    st.write("[Learn More >](https://pythonandvba.com)")
+
+
+    # Contact Me Button
+    st.markdown("""
+        <div style="text-align: left ;">
+            <a href="mailto:aleenasani841@gmail.com">
+                <button style="background-color: transparent; color: white; padding: 10px 20px; border: 2px solid white; border-radius: 5px; cursor: pointer;">
+                    Contact Me
+                </button>
+            </a>
+        </div>
+        """, unsafe_allow_html=True)
+
 
 # ----- WHAT I DO -----
 with st.container():
@@ -111,5 +123,81 @@ with st.container():
 
 with st.container():
     st.write("---")
+    st.markdown("<h1 style='text-align: center;'>CONTACT ME</h1>", unsafe_allow_html=True)
+
+    # Contact Details with Icons
+    st.markdown("""
+        <div style="text-align: center;">
+            <p>
+                <span style="margin-right: 20px;">📧   aleenasani841@gmail.com</span>
+                <span>📞   +916282566039</span>
+            </p>
+            <p>📍   Bangalore, India</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 
+
+with st.container():
+    st.write("---")
+
+    import streamlit as st
+
+    # Define the layout
+    st.markdown("""
+    <style>
+    /* Main container styling */
+    .container {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        background-color: black;
+        border-radius: 10px;
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    /* Hover Box Styling */
+    .hover-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: #4CAF50;
+        transition: height 0.5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    /* Hover Text Content Styling */
+    .hover-content {
+        font-size: 18px;
+        color: white;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    /* Hover Effect */
+    .container:hover .hover-box {
+        height: 100%;
+    }
+
+    .container:hover .hover-content {
+        opacity: 1;
+    }
+    </style>
+
+    <div class="container">
+        <h2>Graphic Designer</h2>
+        <!-- Hover Box -->
+        <a href="/pages/graphic.py" style="text-decoration: none;">
+            <div class="hover-box">
+                <div class="hover-content">See More</div>
+            </div>
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
